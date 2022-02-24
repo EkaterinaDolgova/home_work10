@@ -2,35 +2,15 @@ package skyro.company;
 
 //Класс
 public class Book {
-    String name;
-    String authorName;
-    int year;
+    private String name;
+    private Author author;
+    private int year;
 
-    //Класс
-    public class Author {
-        String name;
-        String soname;
-
-        //Конструктор
-        public Author(String name, String soname) {
-            this.name = name;
-            this.soname = soname;
-        }
-
-        //Геттеры
-        public String getName() {
-            return this.name;
-        }
-
-        public String getSoname() {
-            return this.soname;
-        }
-    }
 
     //Конструктор
-    public Book(String name, String authorName, int year) {
+    public Book(String name, Author author, int year) {
         this.name = name;
-        this.authorName = authorName;
+        this.author = author;
         this.year = year;
     }
 
@@ -39,8 +19,8 @@ public class Book {
         return this.name;
     }
 
-    public String getAuthorName() {
-        return this.authorName;
+    public Author getAuthor() {
+        return this.author;
     }
 
     public int getYear() {

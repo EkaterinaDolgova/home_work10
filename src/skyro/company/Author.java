@@ -2,8 +2,8 @@ package skyro.company;
 
 //Класс
 public class Author {
-    String name;
-    String soname;
+    private String name;
+    private String soname;
 
     //Конструктор
     public Author(String name, String soname) {
