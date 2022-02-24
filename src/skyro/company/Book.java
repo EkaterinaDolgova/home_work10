@@ -1,5 +1,7 @@
 package skyro.company;
 
+import java.util.Objects;
+
 //Класс
 public class Book {
     private String name;
@@ -30,6 +32,24 @@ public class Book {
     //Сеттер
     public void setYear(int year) {
         this.year = year;
+    }
+
+    @Override
+    public boolean equals(Object other) {
+        if (this.getClass() != other.getClass()) {
+            return false;
+        }
+        Book c2 = (Book) other;
+        return getName().equals(c2.getName());
+    }
+    @Override
+    public int hashCode() {
+        return Objects.hash(getName());
+    }
+
+    @Override
+    public String toString() {
+        return "Наименование книги: " + this.name + " Автор: " + this.author + " Дата издания: " + this.year ;
     }
 }
 

@@ -10,7 +10,8 @@ public class Main {
         Book Garry1 = new Book("Игры престолов1", Martin1, 1987);
         Book Garry2 = new Book("Игры престолов2", Martin2, 1988);
         System.out.println("Книга " + Garry.getName());
-        System.out.println("Автор книги " + Garry.getAuthor());
+        System.out.println(Garry.getAuthor());
+        System.out.println(Garry);
         System.out.println("Год выпуска книги " + Garry.getYear());
         Garry.setYear(1990);
         System.out.println("Год выпуска книги " + Garry.getYear());
@@ -19,5 +20,7 @@ public class Main {
         for (int i = 0; i < 3; i++) {
             System.out.println(arrString[i] + ",");
         }
+
+        System.out.println("Книги " + Garry.equals(Garry1));
     }
 }

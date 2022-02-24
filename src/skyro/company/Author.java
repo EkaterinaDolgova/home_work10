@@ -19,4 +19,9 @@ public class Author {
     public String getSoname() {
         return this.soname;
     }
+
+    @Override
+    public String toString() {
+        return "Автор книги " + this.name + " " + this.soname ;
+    }
 }
